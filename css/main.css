@@ -133,4 +133,53 @@ a{
     width: 100%; 
 } */
 
+/*Card*/
+.card-deck .card-secondary {
+    border: 0;
+    padding: 20px 20px 0;
+    margin: 16px;
+    border-radius: 0;
+}
 
+.card-deck .card-secondary:hover {
+    box-shadow: 20px 40px 60px -20px rgba(12, 5, 62, 0.15);
+}
+
+.card-deck .card-secondary:hover .card-title {
+    color: #4e22d0;
+}
+
+.card-deck .card-secondary .card-body {
+    padding: 0;
+}
+
+.card-deck .card-secondary .card-img-top {
+    margin-bottom: 15px;
+    border-radius: 0px;
+}
+
+.card-deck .card-secondary .card-title {
+    color: #261c6a;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.card-deck .card-secondary .card-text {
+    color: #261c6a;
+    font-size: 14px;
+    line-height: 1.71;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.card-deck .card-secondary .card-footer {
+    padding: 0px 0 0px;
+    background: transparent;
+    border: 0;
+}
+
+.card-deck .card-secondary .card-footer .btn {
+    margin-right: -10px; /*ห่างจากการ์ดเข้ามา*/
+}
