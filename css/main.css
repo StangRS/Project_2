@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    /* border: solid 1px black; */
+}
+.Navbar{
+    height: 60px;
+    background:white;
+    display: flex;
+    padding: 0% 5%;
+    color:#656565;
+}
+
+.right{
+    text-align: right;
+    width: 80%;
+}
+
+.right a{
+    color:#656565;
+    text-decoration:none;
+    line-height: 55px;
+    padding: 0% 2%;
+    display: inline-block;
+}
+
+.left{
+   margin-right: auto;
+   line-height: 50px;
+}
+
+.welcome{
+    padding: 0% 10%;
+}
+/* .card{
+    width: 250px;
+    height: 180px;
+    display: block;
+} */
+.new{
+    padding: 0% 10%;
+}
+
+a{
+    text-decoration:none!important;
+}
+.right a:hover{
+    opacity:0;
+    }
+.bg-img1{
+    background:url(../img/IMG_9707.JPG);
+    background-position-y: 35%;
+    background-position-x: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: lightcoral; 
+    height: 500px;
+    width: 100%; 
+    /* overflow: hidden; */
+}
+
+.main-video{
+    background-color:#1F1E1E; 
+    height: 800px; 
+    display: block; 
+    color: white;
+}
+
+.col1{
+    width: 100%;
+    height: 50%;
+    display: inline-block;
+    text-align: center;
+    /* float: left; */
+    padding-top: 7%;
+    
+}
+
+.col1 iframe{
+    padding: 0% 1%;
+    height: 200px;
+    width: 400px;
+}
+
+.main-contact{
+    top: 9%;
+    padding: 10% 0%;
+    transform: translateX(5.5%);
+}
+
+.footer{
+    height: 200px;
+    width: 100%;
+    background-color: #E4E0E0;
+    padding: 0%;
+    position: relative;
+    display: block;
+    color: #707070;
+
+}
+
+/* 
+.col2{
+    width: 100%;
+    height: 50%;
+    display: inline-block;
+    text-align: center;
+    /* float: left; */
+    /* padding-top: 7%; 
+} */
+
+.col2 span{
+    padding: 0% 1%;
+    height: 200px;
+    width: 400px;
+} 
+
+.item-foot i{
+    padding-right: 2%;
+    padding-left: 2%;
+    color: black;
+}
+/* .bg-img1{
+    background:url(../img/cae78ab364eec014ac10198a1eac5e6ae_31275193_201123.jpg);
+    background-position: center;
+    background-size: cover;
+    color: lightcoral; 
+    height: 500px;
+    width: 100%; 
+} */
+
+
