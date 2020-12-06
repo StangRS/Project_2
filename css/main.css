@@ -133,11 +133,11 @@ a{
     width: 100%; 
 } */
 
-/*Card*/
+/*Home - Card*/
 .card-deck .card-secondary {
     border: 0;
     padding: 20px 20px 0;
-    margin: 16px;
+    margin: 15px;
     border-radius: 0;
 }
 
@@ -145,7 +145,7 @@ a{
     box-shadow: 20px 40px 60px -20px rgba(12, 5, 62, 0.15);
 }
 
-.card-deck .card-secondary:hover .card-title {
+.card-deck .card-secondary:hover .card-title .btn {
     color: #4e22d0;
 }
 
@@ -158,28 +158,30 @@ a{
     border-radius: 0px;
 }
 
-.card-deck .card-secondary .card-title {
+.card-deck .card-secondary .card-title .btn {
     color: #261c6a;
     font-size: 20px;
     line-height: 1.6;
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
-.card-deck .card-secondary .card-text {
+.card-deck .card-secondary .card-text .btn {
     color: #261c6a;
     font-size: 14px;
     line-height: 1.71;
     font-weight: 400;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .card-deck .card-secondary .card-footer {
     padding: 0px 0 0px;
     background: transparent;
     border: 0;
-}
+} */
 
-.card-deck .card-secondary .card-footer .btn {
+.card-deck .card-secondary .textright {
     margin-right: -10px; /*ห่างจากการ์ดเข้ามา*/
 }
+
+/*Gallery*/
