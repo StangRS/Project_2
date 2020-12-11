@@ -8,14 +8,6 @@
   /* border: solid 1px black; */
 }
 
-.Navbar {
-  height: 60px;
-  background: white;
-  display: flex;
-  padding: 0% 5%;
-  color: #656565;
-}
-
 .right {
   text-align: right;
   width: 80%;
