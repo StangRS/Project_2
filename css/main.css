@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;700&display=swap');
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", "Prompt", sans-serif;
 }
 
 /* Narbar */
@@ -39,25 +40,15 @@
   padding: 0% 10%;
 }
 
-.new {
-  padding: 0% 10%;
-}
-
 a {
   text-decoration: none !important;
 }
 
-.bg-img1 {
-  background: url(../img/IMG_9707.JPG);
-  background-position-y: 35%;
-  background-position-x: 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: lightcoral;
-  height: 500px;
-  width: 100%;
-  /* overflow: hidden; */
+header {
+  color: white;
+  text-align: center;
 }
+
 /*Home - Card*/
 .card-deck .card-secondary {
   border: 0;
@@ -108,10 +99,23 @@ a {
   margin-right: -10px; /*ห่างจากการ์ดเข้ามา*/
 }
 
-/*Video Youtube*/
+/*Home - Artist*/
+.bg-img1 {
+  background: url(../img/IMG_9707.JPG);
+  background-position-y: 35%;
+  background-position-x: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: lightcoral;
+  height: 500px;
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+/*Home - Video Youtube*/
 .main-video {
   background-color: #1f1e1e;
-  height: 800px;
+  height: 750px;
   display: block;
   color: white;
 }
@@ -131,7 +135,7 @@ a {
   width: 400px;
 }
 
-/*Contact*/
+/*Home - Contact*/
 .main-contact {
   background-color: #525151;
   display: block;
@@ -144,7 +148,7 @@ a {
   margin-left: 5%;
 }
 
-/* Style inputs */
+/* contact inputs */
 .contact input[type="text"],
 select,
 textarea {
@@ -234,14 +238,4 @@ textarea {
   padding-left: 2%;
   color: black;
 }
-/* .bg-img1{
-    background:url(../img/cae78ab364eec014ac10198a1eac5e6ae_31275193_201123.jpg);
-    background-position: center;
-    background-size: cover;
-    color: lightcoral; 
-    height: 500px;
-    width: 100%; 
-} */
-
-
 
