@@ -20,9 +20,102 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <!--set up fancybox-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </head>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
+    body {
+      background-color: #202125;
+    }
+
+    .heading {
+      text-align: center;
+      font-size: 2em;
+      letter-spacing: 1px;
+      padding: 40px;
+      color: white;
+    }
+
+    .gallery-image {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gallery-image img {
+      height: 250px;
+      width: 350px;
+      transform: scale(1);
+      transition: transform 0.4s ease;
+    }
+
+    .img-box {
+      box-sizing: content-box;
+      margin: 10px;
+      height: 250px;
+      width: 350px;
+      overflow: hidden;
+      display: inline-block;
+      color: white;
+      position: relative;
+      background-color: white;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 5px;
+      left: 20px;
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .transparent-box {
+      height: 250px;
+      width: 350px;
+      background-color: rgba(0, 0, 0, 0);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: background-color 0.3s ease;
+    }
+
+    .img-box:hover img {
+      transform: scale(1.1);
+    }
+
+    .img-box:hover .transparent-box {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .img-box:hover .caption {
+      transform: translateY(-20px);
+      opacity: 1;
+    }
+
+    .img-box:hover {
+      cursor: pointer;
+    }
+
+    .caption > p:nth-child(2) {
+      font-size: 0.8em;
+    }
+
+    .opacity-low {
+      opacity: 0.5;
+    }
   </style>
   <body>
     <!--NavBar-->
@@ -41,214 +134,497 @@
       <div class="right">
         <a class="link" href="home.html">Home</a>
         <a class="link" href="artist.html">Artist</a>
-        <a class="link" href="gallery.html">Gallery</a>
+        <a class="link" href="gallery.html">Gallary</a>
         <a class="link" href="store.html">Store</a>
       </div>
     </nav>
     <!--End NavBar-->
 
+    <!--Gallery-->
+    <div><br /></div>
+    <header class="text-center" style="color: white">
+      <h1>GALLERY</h1>
+    </header>
+
     <!--Photo-->
-    <div class="container">
-      <div><br /></div>
-      <header class="text-center">
-        <h1>Gallery</h1>
-      </header>
-      <div class="row">
-        <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
-          <div class="row h-50">
-            <div class="col-md-12 col-sm-12 co-xs-12 gal-item">
-              <div class="box gallery-item">
+    <div class="gallery-image">
+      <!--Photo 6-years-->
+      <div class="img-box">
+        <img src="/img/gallery/6-years/jacky poster.png" alt="6-years" />
+        <div class="transparent-box">
+          <p>
+            <a
+              href="/img/gallery/6-years/jacky poster.png"
+              data-fancybox="images-preview"
+              data-caption="Poster - 6 Years"
+              data-width="1500"
+              data-height="1000"
+              data-thumbs='{"autoStart":true}'
+            >
+              <img src="/img/gallery/6-years/jacky poster.png" alt="6-years" />
+            </a>
+          </p>
+
+          <!--Photo 6-years hide-->
+          <div style="display: none">
+            <a
+              href="/img/gallery/6-years/non poster.png"
+              data-fancybox="images-preview"
+              data-width="1500"
+              data-height="1000"
+            >
+              <div>
                 <img
-                  src="http://fakeimg.pl/758x370/"
-                  class="img-ht img-fluid rounded"
+                  src="/img/gallery/6-years/non poster.png"
+                  data-thumb="/img/gallery/6-years/non poster.png"
+                  alt="6-years"
                 />
               </div>
-            </div>
+            </a>
+
+            <a
+              href="/img/gallery/6-years/pevk poster.png"
+              data-fancybox="images-preview"
+              data-width="1500"
+              data-height="1000"
+            >
+              <div>
+                <img
+                  src="/img/gallery/6-years/pevk poster.png"
+                  data-thumb="/img/gallery/6-years/pevk poster.png"
+                  alt="6-years"
+                />
+              </div>
+            </a>
           </div>
+          <!--End Photo 6-years hide-->
 
-          <div class="row h-50">
-            <div class="col-md-6 col-sm-6 co-xs-12 gal-item">
-              <div class="box">
-                <img
-                  src="http://fakeimg.pl/748x177/"
-                  class="img-ht img-fluid rounded"
-                />
-              </div>
-            </div>
-
-            <div class="col-md-6 col-sm-6 co-xs-12 gal-item">
-              <div class="box">
-                <img
-                  src="http://fakeimg.pl/371x370/"
-                  class="img-ht img-fluid rounded"
-                />
-              </div>
-            </div>
+          <div class="caption">
+            <p>Poster</p>
+            <p class="opacity-low">6 Years</p>
           </div>
         </div>
+      </div>
+      <!--End Photo 6-years-->
 
-        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-          <div class="col-md-12 col-sm-6 co-xs-12 gal-item h-25">
-            <div class="box">
+      <!--Photo nisakorn-->
+      <div class="img-box">
+        <img
+          src="/img/gallery/nisakporn/nisakorn 1080.png minimal.png"
+          alt="nisakorn"
+        />
+        <div class="transparent-box">
+          <p>
+            <a
+              href="/img/gallery/nisakporn/nisakorn 1080.png minimal.png"
+              data-fancybox="images-preview"
+              data-caption="Poster - Nisakorn"
+              data-width="1500"
+              data-height="1000"
+              data-thumbs='{"autoStart":true}'
+            >
               <img
-                src="http://fakeimg.pl/748x177/"
-                class="img-ht img-fluid rounded"
+                src="/img/gallery/nisakporn/nisakorn 1080.png minimal.png"
+                alt="nisakorn"
               />
-            </div>
-          </div>
+            </a>
+          </p>
 
-          <div class="col-md-12 col-sm-6 co-xs-12 gal-item h-75">
-            <div class="box">
+          <!--Photo nisakorn hide-->
+          <div style="display: none">
+            <a
+              href="/img/gallery/nisakporn/nisakorn.png"
+              data-fancybox="images-preview"
+              data-width="1500"
+              data-height="1000"
+            >
+              <div>
+                <img
+                  src="/img/gallery/nisakporn/nisakorn.png"
+                  data-thumb="/img/gallery/nisakporn/nisakorn.png"
+                  alt="nisakorn"
+                />
+              </div>
+            </a>
+
+            <a
+              href="/img/gallery/nisakporn/เนื้อเพลง3.png"
+              data-fancybox="images-preview"
+              data-width="1500"
+              data-height="1000"
+            >
+              <div>
+                <img
+                  src="/img/gallery/nisakporn/เนื้อเพลง3.png"
+                  data-thumb="/img/gallery/nisakporn/เนื้อเพลง3.png"
+                  alt="nisakorn"
+                />
+              </div>
+            </a>
+          </div>
+          <!-- End Photo nisakorn hide-->
+
+          <div class="caption">
+            <p>Poster</p>
+            <p class="opacity-low">Nisakorn</p>
+          </div>
+        </div>
+      </div>
+      <!--End Photo nisakorn-->
+
+      <!--Photo Youtube-->
+      <div class="img-box">
+        <img src="/img/gallery/youtube/youtube teaser 1.png" alt="youtube" />
+        <div class="transparent-box">
+          <p>
+            <a
+              href="/img/gallery/youtube/youtube teaser 1.png"
+              data-fancybox="images-preview"
+              data-caption="Poster - Youtube"
+              data-width="1500"
+              data-height="1000"
+              data-thumbs='{"autoStart":true}'
+            >
               <img
-                src="http://fakeimg.pl/748x177/"
-                class="img-ht img-fluid rounded"
+                src="/img/gallery/youtube/youtube teaser 1.png"
+                alt="youtube"
               />
-            </div>
+            </a>
+          </p>
+
+          <!--Photo Youtube hide-->
+          <div style="display: none">
+            <a
+              href="/img/gallery/youtube/youtube teaser 2.png"
+              data-fancybox="images-preview"
+              data-width="1500"
+              data-height="1000"
+            >
+              <div>
+                <img
+                  src="/img/gallery/youtube/youtube teaser 2.png"
+                  data-thumb="/img/gallery/youtube/youtube teaser 2.png"
+                  alt="youtube"
+                />
+              </div>
+            </a>
+
+            <a
+              href="/img/gallery/youtube/youtube teaser 3.png"
+              data-fancybox="images-preview"
+              data-width="1500"
+              data-height="1000"
+            >
+              <div>
+                <img
+                  src="/img/gallery/youtube/youtube teaser 3.png"
+                  data-thumb="/img/gallery/youtube/youtube teaser 3.png"
+                  alt="youtube"
+                />
+              </div>
+            </a>
+
+            <a
+              href="/img/gallery/youtube/youtube BTS.png"
+              data-fancybox="images-preview"
+              data-width="1500"
+              data-height="1000"
+            >
+              <div>
+                <img
+                  src="/img/gallery/youtube/youtube BTS.png"
+                  data-thumb="/img/gallery/youtube/youtube BTS.png"
+                  alt="youtube"
+                />
+              </div>
+            </a>
+
+            <a
+              href="/img/gallery/youtube/youtube content.png"
+              data-fancybox="images-preview"
+              data-width="1500"
+              data-height="1000"
+            >
+              <div>
+                <img
+                  src="/img/gallery/youtube//youtube content.png"
+                  data-thumb="/img/gallery/youtube/youtube content.png"
+                  alt="youtube"
+                />
+              </div>
+            </a>
+
+            <a
+              href="/img/gallery/youtube/youtube MV.png"
+              data-fancybox="images-preview"
+              data-width="1500"
+              data-height="1000"
+            >
+              <div>
+                <img
+                  src="/img/gallery/youtube/youtube MV.png"
+                  data-thumb="/img/gallery/youtube/youtube MV.png"
+                  alt="youtube"
+                />
+              </div>
+            </a>
+          </div>
+          <!--End Photo Youtube hide-->
+
+          <div class="caption">
+            <p>Poster</p>
+            <p class="opacity-low">Youtube</p>
           </div>
         </div>
       </div>
-      <br />
-    </div>
-    <!--End Photo-->
+      <!--End Photo Youtube-->
 
-    <h1>Masonry Gallery</h1>
+      <!--Photo เจ็บตรงที่-->
+      <div class="img-box">
+        <img
+          src="/img/gallery/เจ็บตรงที่/poster 4 no logo.png"
+          alt="เจ็บตรงที่"
+        />
+        <div class="transparent-box">
+          <p>
+            <a
+              href="/img/gallery/เจ็บตรงที่/poster 4 no logo.png"
+              data-fancybox="images-preview"
+              data-caption="Poster - เจ็บตรงที่"
+              data-width="1500"
+              data-height="1000"
+              data-thumbs='{"autoStart":true}'
+            >
+              <img
+                src="/img/gallery/เจ็บตรงที่/poster 4 no logo.png"
+                alt="เจ็บตรงที่"
+              />
+            </a>
+          </p>
 
-    <div class="gallery" id="gallery">
-      <div class="gallery-item ">
-        <div class="content byebye">
-          <img src="https://source.unsplash.com/random/?tech,care" alt="" />
+          <!--Photo เจ็บตรงที่ hide-->
+          <div style="display: none">
+            <a
+              href="/img/gallery/เจ็บตรงที่/poster 4.2.png"
+              data-fancybox="images-preview"
+              data-width="1500"
+              data-height="1000"
+            >
+              <div>
+                <img
+                  src="/img/gallery/เจ็บตรงที่/poster 4.2.png"
+                  data-thumb="/img/gallery/เจ็บตรงที่/poster 4.2.png"
+                  alt="เจ็บตรงที่"
+                />
+              </div>
+            </a>
+
+            <a
+              href="/img/gallery/เจ็บตรงที่/poster 4.png"
+              data-fancybox="images-preview"
+              data-width="1500"
+              data-height="1000"
+            >
+              <div>
+                <img
+                  src="/img/gallery/เจ็บตรงที่/poster 4.png"
+                  data-thumb="/img/gallery/เจ็บตรงที่/poster 4.png"
+                  alt="เจ็บตรงที่"
+                />
+              </div>
+            </a>
+          </div>
+          <!--End Photo เจ็บตรงที่ hide-->
+
+          <div class="caption">
+            <p>Poster</p>
+            <p class="opacity-low">เจ็บตรงที่</p>
+          </div>
         </div>
       </div>
-      <div class="gallery-item">
-        <div class="content ">
-          <img src="https://source.unsplash.com/random/?tech,studied" alt="" />
+      <!--End Photo เจ็บตรงที่-->
+
+      <!--Photo ในนามของความเหงา-->
+      <div class="img-box">
+        <img
+          src="/img/gallery/ในนามของความเหงา/1080.png"
+          alt="ในนามของความเหงา"
+        />
+        <div class="transparent-box">
+          <p>
+            <a
+              href="/img/gallery/ในนามของความเหงา/1080.png"
+              data-fancybox="images-preview"
+              data-caption="Poster - ในนามของความเหงา"
+              data-width="1500"
+              data-height="1000"
+              data-thumbs='{"autoStart":true}'
+            >
+              <img
+                src="/img/gallery/ในนามของความเหงา/1080.png"
+                alt="ในนามของความเหงา"
+              />
+            </a>
+          </p>
+
+          <!--Photo ในนามของความเหงา hide-->
+          <div style="display: none">
+            <a
+              href="/img/gallery/ในนามของความเหงา/กิจกรรม.png"
+              data-fancybox="images-preview"
+              data-width="1500"
+              data-height="1000"
+            >
+              <div>
+                <img
+                  src="/img/gallery/ในนามของความเหงา/กิจกรรม.png"
+                  data-thumb="/img/gallery/ในนามของความเหงา/กิจกรรม.png"
+                  alt="ในนามของความเหงา"
+                />
+              </div>
+            </a>
+
+            <a
+              href="/img/gallery/ในนามของความเหงา/ปก 2.png"
+              data-fancybox="images-preview"
+              data-width="1500"
+              data-height="1000"
+            >
+              <div>
+                <img
+                  src="/img/gallery/ในนามของความเหงา/ปก 2.png"
+                  data-thumb="/img/gallery/ในนามของความเหงา/ปก 2.png"
+                  alt="ในนามของความเหงา"
+                />
+              </div>
+            </a>
+
+            <a
+              href="/img/gallery/ในนามของความเหงา/ปก.png"
+              data-fancybox="images-preview"
+              data-width="1500"
+              data-height="1000"
+            >
+              <div>
+                <img
+                  src="/img/gallery/ในนามของความเหงา/ปก.png"
+                  data-thumb="/img/gallery/ในนามของความเหงา/ปก.png"
+                  alt="ในนามของความเหงา"
+                />
+              </div>
+            </a>
+          </div>
+          <!--End Photo ในนามของความเหงา hide-->
+
+          <div class="caption">
+            <p>Poster</p>
+            <p class="opacity-low">ในนามของความเหงา</p>
+          </div>
         </div>
       </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img
-            src="https://source.unsplash.com/random/?tech,substance"
-            alt=""
-          />
+      <!--End Photo ในนามของความเหงา-->
+
+      <!--Photo อยากรอ-->
+      <div class="img-box">
+        <img
+          src="/img/gallery/อยากรอ/อยากรอ 1080.png"
+          alt="อยากรอ"
+        />
+        <div class="transparent-box">
+          <p>
+            <a
+              href="/img/gallery/อยากรอ/อยากรอ 1080.png"
+              data-fancybox="images-preview"
+              data-caption="Poster - อยากรอ"
+              data-width="1500"
+              data-height="1000"
+              data-thumbs='{"autoStart":true}'
+            >
+              <img
+                src="/img/gallery/อยากรอ/อยากรอ 1080.png"
+                alt="อยากรอ"
+              />
+            </a>
+          </p>
+
+          <!--Photo ในนามของความเหงา hide-->
+          <div style="display: none">
+            <a
+              href="/img/gallery/อยากรอ/อยากรอ.png"
+              data-fancybox="images-preview"
+              data-width="1500"
+              data-height="1000"
+            >
+              <div>
+                <img
+                  src="/img/gallery/อยากรอ/อยากรอ.png"
+                  data-thumb="/img/gallery/อยากรอ/อยากรอ.png"
+                  alt="อยากรอ"
+                />
+              </div>
+            </a>
+
+            <a
+              href="/img/gallery/อยากรอ/เนื้อเพลง.png"
+              data-fancybox="images-preview"
+              data-width="1500"
+              data-height="1000"
+            >
+              <div>
+                <img
+                  src="/img/gallery/อยากรอ/เนื้อเพลง.png"
+                  data-thumb="/img/gallery/อยากรอ/เนื้อเพลง.png"
+                  alt="อยากรอ"
+                />
+              </div>
+            </a>
+          </div>
+          <!--End Photo อยากรอ hide-->
+
+          <div class="caption">
+            <p>Poster</p>
+            <p class="opacity-low">อยากรอ</p>
+          </div>
         </div>
       </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,choose" alt="" />
-        </div>
+      <!--End Photo อยากรอ-->
+
+    </div>
+    <br />
+    <!--End Gallery-->
+
+    <!--Footer-->
+    <div class="footer">
+      <div
+        style="
+          top: 15%;
+          transform: translateY(50%);
+          width: 100%;
+          text-align: center;
+          position: absolute;
+        "
+      >
+        @2023 By Mo And Stang
       </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,past" alt="" />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,lamp" alt="" />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,yet" alt="" />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,eight" alt="" />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,crew" alt="" />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,event" alt="" />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img
-            src="https://source.unsplash.com/random/?tech,instrument"
-            alt=""
-          />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img
-            src="https://source.unsplash.com/random/?tech,practical"
-            alt=""
-          />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,pass" alt="" />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,bigger" alt="" />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,number" alt="" />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,feature" alt="" />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,line" alt="" />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,railroad" alt="" />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,pride" alt="" />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,too" alt="" />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,bottle" alt="" />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,base" alt="" />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,cell" alt="" />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,bag" alt="" />
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="content">
-          <img src="https://source.unsplash.com/random/?tech,card" alt="" />
-        </div>
+      <div
+        class="item-foot"
+        style="
+          top: 30%;
+          transform: translateY(80%);
+          width: 100%;
+          position: absolute;
+          text-align: center;
+          display: block;
+        "
+      >
+        <i class="fab fa-2x fa-spotify"></i>
+        <i class="fab fa-2x fa-facebook"></i>
+        <i class="fab fa-2x fa-twitter"></i>
+        <i class="fab fa-2x fa-youtube"></i>
+        <i class="fab fa-2x fa-instagram"></i>
       </div>
     </div>
+    <!--End Footer-->
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
