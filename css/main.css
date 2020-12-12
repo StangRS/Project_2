@@ -5,9 +5,9 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
-  /* border: solid 1px black; */
 }
 
+/* Narbar */
 .right {
   text-align: right;
   width: 80%;
@@ -21,6 +21,15 @@
   display: inline-block;
 }
 
+.right a:hover {
+  opacity: 4;
+  color: #5881AA;
+}
+
+.right a .nav-link:active {
+  color: #307fce;
+}
+
 .left {
   margin-right: auto;
   line-height: 50px;
@@ -29,11 +38,7 @@
 .welcome {
   padding: 0% 10%;
 }
-/* .card{
-    width: 250px;
-    height: 180px;
-    display: block;
-} */
+
 .new {
   padding: 0% 10%;
 }
@@ -41,9 +46,7 @@
 a {
   text-decoration: none !important;
 }
-.right a:hover {
-  opacity: 0;
-}
+
 .bg-img1 {
   background: url(../img/IMG_9707.JPG);
   background-position-y: 35%;
@@ -54,6 +57,55 @@ a {
   height: 500px;
   width: 100%;
   /* overflow: hidden; */
+}
+/*Home - Card*/
+.card-deck .card-secondary {
+  border: 0;
+  padding: 20px 20px 0;
+  margin: 15px;
+  border-radius: 0;
+}
+
+.card-deck .card-secondary:hover {
+  box-shadow: 20px 40px 60px -20px rgba(12, 5, 62, 0.15);
+}
+
+.card-deck .card-secondary:hover .card-title .btn {
+  color: #5881aa;
+}
+
+.card-deck .card-secondary .card-body {
+  padding: 0;
+}
+
+.card-deck .card-secondary .card-img-top {
+  margin-bottom: 15px;
+  border-radius: 0px;
+}
+
+.card-deck .card-secondary .card-title .btn {
+  color: #4B4E51;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+.card-deck .card-secondary .card-text .btn {
+  color: #4B4E51;
+  font-size: 14px;
+  line-height: 1.71;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.card-deck .card-secondary .card-footer {
+  padding: 0px 0 0px;
+  background: transparent;
+  border: 0;
+}
+*/ .card-deck .card-secondary .textright {
+  margin-right: -10px; /*ห่างจากการ์ดเข้ามา*/
 }
 
 /*Video Youtube*/
@@ -191,54 +243,5 @@ textarea {
     width: 100%; 
 } */
 
-/*Home - Card*/
-.card-deck .card-secondary {
-  border: 0;
-  padding: 20px 20px 0;
-  margin: 15px;
-  border-radius: 0;
-}
 
-.card-deck .card-secondary:hover {
-  box-shadow: 20px 40px 60px -20px rgba(12, 5, 62, 0.15);
-}
 
-.card-deck .card-secondary:hover .card-title .btn {
-  color: #4e22d0;
-}
-
-.card-deck .card-secondary .card-body {
-  padding: 0;
-}
-
-.card-deck .card-secondary .card-img-top {
-  margin-bottom: 15px;
-  border-radius: 0px;
-}
-
-.card-deck .card-secondary .card-title .btn {
-  color: #261c6a;
-  font-size: 20px;
-  line-height: 1.6;
-  font-weight: 700;
-  margin-bottom: 0px;
-}
-
-.card-deck .card-secondary .card-text .btn {
-  color: #261c6a;
-  font-size: 14px;
-  line-height: 1.71;
-  font-weight: 400;
-  margin-bottom: 5px;
-}
-
-.card-deck .card-secondary .card-footer {
-  padding: 0px 0 0px;
-  background: transparent;
-  border: 0;
-}
-*/ .card-deck .card-secondary .textright {
-  margin-right: -10px; /*ห่างจากการ์ดเข้ามา*/
-}
-
-/*Gallery*/
