@@ -178,7 +178,7 @@
     <div
       style="
         background-color: white;
-        height: 520px;
+        height: 350px;
         display: block;
         color: black;
         position: relative;
@@ -402,7 +402,43 @@
         color: white;
       "
     >
-      <i class="far fa-play-circle fa-6x"></i>
+    <div class="player" style="top: 20%; left: 6%;">
+      <audio id="audio">
+        <source src="/audio/Loser.mp3" type="mp3/audio" />
+        <source src="/audio/Nisakorn.mp3" type="mp3/audio" />
+        <source src="/audio/Someone is calling you.mp3" type="mp3/audio" />
+        <source src="/audio/Track.mp3" type="mp3/audio" />
+        <source src="/audio/อยากรอ.mp3" type="mp3/audio" />
+        <source src="/audio/ในนามของความว่างเปล่า.mp3" type="mp3/audio" />
+      </audio>
+      <i class="btn__play">
+        <i class="btn__play__arrow"></i>
+        <i class="btn__play__pause"></i>
+      </i>
+      <h3 id="title"></h3>
+      <p id="artist"></p><br>
+      <div>
+        <i class="btn__back">
+          <i id="btnBack" class="fas fa-fast-backward btn__backward"></i
+          >&nbsp;&nbsp;&nbsp;
+          <i id="btnFor" class="fas fa-fast-forward btn__forward"></i>
+        </i>
+      </div>
+      <footer class="player__footer">
+        <span class="player__timeline__time--now">00:15</span>
+        <span class="player__timeline">
+          <span class="player__timeline__progress"></span>
+        </span>
+
+        <span class="player__timeline__time--end">00:31</span>
+        <span class="player__volume">
+          <i class="fa fa-volume-up btn__volume"></i>
+          <span class="player__volume__bar">
+            <span class="player__volume__progress"></span>
+          </span>
+        </span>
+      </footer>
+    </div>
     </div>
     <!--End Audio Play-->
 
@@ -558,6 +594,8 @@
       </div>
     </div>
     <!--End Footer-->
+
+    <script src="/Js/script.js"></script>
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
