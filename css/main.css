@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;700&display=swap");
+/*audio*/
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Raleway", "Prompt", sans-serif;
+  transition: all 0.3s;
 }
 
 /* Narbar */
@@ -24,7 +27,7 @@
 
 .right a:hover {
   opacity: 4;
-  color: #5881AA;
+  color: #5881aa;
 }
 
 .right a .nav-link:active {
@@ -49,7 +52,7 @@ header {
   text-align: center;
 }
 
-/*Home - Card*/
+/*Home - New*/
 .card-deck .card-secondary {
   border: 0;
   padding: 20px 20px 0;
@@ -75,7 +78,7 @@ header {
 }
 
 .card-deck .card-secondary .card-title .btn {
-  color: #4B4E51;
+  color: #4b4e51;
   font-size: 20px;
   line-height: 1.6;
   font-weight: 700;
@@ -83,7 +86,7 @@ header {
 }
 
 .card-deck .card-secondary .card-text .btn {
-  color: #4B4E51;
+  color: #4b4e51;
   font-size: 14px;
   line-height: 1.71;
   font-weight: 400;
@@ -97,6 +100,146 @@ header {
 }
 */ .card-deck .card-secondary .textright {
   margin-right: -10px; /*ห่างจากการ์ดเข้ามา*/
+}
+/*Home - Audio*/
+.player {
+  width: 850px;
+  height: 170px;
+  margin: 150px auto;
+  color: #fff;
+  position: relative;
+  padding-top: 30px;
+}
+
+.player p {
+  color: rgb(114, 114, 114);
+  size: 24px;
+}
+
+.btn__play {
+  width: 87px;
+  height: 87px;
+  display: block;
+  margin: -10px 21px 0;
+  float: left;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: relative;
+  cursor: pointer;
+}
+.btn__play__arrow {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 30px solid #fff;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+.btn__play__pause {
+  position: absolute;
+  width: 30%;
+  height: 50%;
+  border-left: 8px solid #fff;
+  border-right: 8px solid #fff;
+  top: 20px;
+  left: 30px;
+  display: none;
+}
+.btn__play:hover {
+  border-color: #5881aa;
+}
+.btn__play:hover > .btn__play__arrow {
+  border-left-color: #5881aa;
+}
+.btn__play:hover > .btn__play__pause {
+  border-left-color: #5881aa;
+  border-right-color: #5881aa;
+}
+
+.btn__backward {
+  width: 20px;
+  height: 20px;
+  font-size: 40px;
+  position: absolute;
+  top: 25%;
+  left: 550px;
+}
+
+.btn__forward {
+  width: 20px;
+  height: 20px;
+  font-size: 40px;
+  position: absolute;
+  top: 25%;
+  left: 632px;
+}
+
+.btn__backward:hover {
+  color: #5881aa;
+}
+
+.btn__forward:hover {
+  color: #5881aa;
+}
+
+.player__footer {
+  background: #1f1e1e;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  padding: 12px 20px;
+  font-size: 15px;
+}
+.player h3 {
+  font-size: 23px;
+}
+.player p {
+  width: 90%;
+  font-size: 14px;
+}
+.player__timeline,
+.player__volume__bar {
+  height: 10px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  cursor: pointer;
+}
+.player__timeline {
+  width: 420px;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+.btn__volume {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 560px;
+  cursor: pointer;
+}
+.player__volume__progress,
+.player__timeline__progress {
+  background-color: #fff;
+  height: 100%;
+  display: block;
+}
+.player__volume__progress {
+  width: 70%;
+}
+.player__volume__progress:hover,
+.player__timeline__progress:hover {
+  background-color: #ff912a;
+}
+.player__volume__bar {
+  width: 80px;
+  margin-left: 40px;
 }
 
 /*Home - Artist*/
@@ -113,26 +256,26 @@ header {
 }
 
 .bg-img1 h1 {
-  text-align: end; 
-  position: relative; 
-  top: 20%; 
+  text-align: end;
+  position: relative;
+  top: 20%;
   right: 5%;
   color: black;
 }
 
 .bg-img1 p {
-  text-align: end; 
-  position: relative; 
-  top: 20%; 
+  text-align: end;
+  position: relative;
+  top: 20%;
   right: 5%;
-  color: black; 
+  color: black;
   font-size: 20px;
 }
 
 /*Home - Video Youtube*/
 .main-video {
   background-color: #1f1e1e;
-  height: 750px;
+  height: 700px;
   display: block;
   color: white;
 }
@@ -343,4 +486,3 @@ textarea {
   color: #656565;
   font-weight: bold;
 }
-
