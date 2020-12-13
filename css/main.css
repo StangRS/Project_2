@@ -112,6 +112,23 @@ header {
   /* overflow: hidden; */
 }
 
+.bg-img1 h1 {
+  text-align: end; 
+  position: relative; 
+  top: 20%; 
+  right: 5%;
+  color: black;
+}
+
+.bg-img1 p {
+  text-align: end; 
+  position: relative; 
+  top: 20%; 
+  right: 5%;
+  color: black; 
+  font-size: 20px;
+}
+
 /*Home - Video Youtube*/
 .main-video {
   background-color: #1f1e1e;
